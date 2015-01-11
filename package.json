@@ -1,6 +1,6 @@
 {
   "name": "humanize-url",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Humanize a URL: http://sindresorhus.com → sindresorhus.com",
   "license": "MIT",
   "repository": "sindresorhus/humanize-url",
