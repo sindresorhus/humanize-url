@@ -6,6 +6,7 @@ test(function (t) {
 	t.assert(humanizeUrl('http://sindresorhus.com') === 'sindresorhus.com');
 	t.assert(humanizeUrl(' http://sindresorhus.com ') === 'sindresorhus.com');
 	t.assert(humanizeUrl('https://sindresorhus.com') === 'sindresorhus.com');
+	t.assert(humanizeUrl('https://user:pass@sindresorhus.com') === 'sindresorhus.com');
 	t.assert(humanizeUrl('http://www.sindresorhus.com') === 'sindresorhus.com');
 	t.assert(humanizeUrl('www.sindresorhus.com') === 'sindresorhus.com');
 	t.assert(humanizeUrl('http://sindresorhus.com/') === 'sindresorhus.com');

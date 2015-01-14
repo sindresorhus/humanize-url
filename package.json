@@ -39,7 +39,8 @@
     "prettify"
   ],
   "dependencies": {
-    "normalize-url": "^1.0.0"
+    "normalize-url": "^1.0.0",
+    "strip-url-auth": "^1.0.0"
   },
   "devDependencies": {
     "ava": "0.0.4"
