@@ -13,10 +13,10 @@ $ npm install --save humanize-url
 ## Usage
 
 ```js
-var humanizeUrl = require('humanize-url');
+const humanizeUrl = require('humanize-url');
 
 humanizeUrl('http://www.sindresorhus.com/');
-//=> sindresorhus.com
+//=> 'sindresorhus.com'
 ```
 
 
