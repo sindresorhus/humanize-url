@@ -1,17 +1,15 @@
-'use strict';
-var test = require('ava');
-var humanizeUrl = require('./');
+import test from 'ava';
+import m from './';
 
-test(function (t) {
-	t.assert(humanizeUrl('http://sindresorhus.com') === 'sindresorhus.com');
-	t.assert(humanizeUrl(' http://sindresorhus.com ') === 'sindresorhus.com');
-	t.assert(humanizeUrl('https://sindresorhus.com') === 'sindresorhus.com');
-	t.assert(humanizeUrl('https://user:pass@sindresorhus.com') === 'sindresorhus.com');
-	t.assert(humanizeUrl('http://www.sindresorhus.com') === 'sindresorhus.com');
-	t.assert(humanizeUrl('www.sindresorhus.com') === 'sindresorhus.com');
-	t.assert(humanizeUrl('http://sindresorhus.com/') === 'sindresorhus.com');
-	t.assert(humanizeUrl('sindresorhus.com/') === 'sindresorhus.com');
-	t.assert(humanizeUrl('http://sindresorhus.com/foo/') === 'sindresorhus.com/foo');
-	t.assert(humanizeUrl('file:///Users/sindresorhus/dev/humanize-url/') === 'file:///Users/sindresorhus/dev/humanize-url');
-	t.end();
+test(t => {
+	t.is(m('http://sindresorhus.com'), 'sindresorhus.com');
+	t.is(m(' http://sindresorhus.com '), 'sindresorhus.com');
+	t.is(m('https://sindresorhus.com'), 'sindresorhus.com');
+	t.is(m('https://user:pass@sindresorhus.com'), 'sindresorhus.com');
+	t.is(m('http://www.sindresorhus.com'), 'sindresorhus.com');
+	t.is(m('www.sindresorhus.com'), 'sindresorhus.com');
+	t.is(m('http://sindresorhus.com/'), 'sindresorhus.com');
+	t.is(m('sindresorhus.com/'), 'sindresorhus.com');
+	t.is(m('http://sindresorhus.com/foo/'), 'sindresorhus.com/foo');
+	t.is(m('file:///Users/sindresorhus/dev/humanize-url/'), 'file:///Users/sindresorhus/dev/humanize-url');
 });
