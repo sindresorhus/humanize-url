@@ -1,15 +1,16 @@
 import test from 'ava';
-import m from './';
+import humanizeUrl from '.';
 
-test(t => {
-	t.is(m('http://sindresorhus.com'), 'sindresorhus.com');
-	t.is(m(' http://sindresorhus.com '), 'sindresorhus.com');
-	t.is(m('https://sindresorhus.com'), 'sindresorhus.com');
-	t.is(m('https://user:pass@sindresorhus.com'), 'sindresorhus.com');
-	t.is(m('http://www.sindresorhus.com'), 'sindresorhus.com');
-	t.is(m('www.sindresorhus.com'), 'sindresorhus.com');
-	t.is(m('http://sindresorhus.com/'), 'sindresorhus.com');
-	t.is(m('sindresorhus.com/'), 'sindresorhus.com');
-	t.is(m('http://sindresorhus.com/foo/'), 'sindresorhus.com/foo');
-	t.is(m('file:///Users/sindresorhus/dev/humanize-url/'), 'file:///Users/sindresorhus/dev/humanize-url');
+test('main', t => {
+	t.is(humanizeUrl('http://sindresorhus.com'), 'sindresorhus.com');
+	t.is(humanizeUrl(' http://sindresorhus.com '), 'sindresorhus.com');
+	t.is(humanizeUrl('https://sindresorhus.com'), 'sindresorhus.com');
+	t.is(humanizeUrl('https://user:pass@sindresorhus.com'), 'sindresorhus.com');
+	t.is(humanizeUrl('http://www.sindresorhus.com'), 'sindresorhus.com');
+	t.is(humanizeUrl('www.sindresorhus.com'), 'sindresorhus.com');
+	t.is(humanizeUrl('http://sindresorhus.com/'), 'sindresorhus.com');
+	t.is(humanizeUrl('sindresorhus.com/'), 'sindresorhus.com');
+	t.is(humanizeUrl('http://sindresorhus.com/foo/'), 'sindresorhus.com/foo');
+	t.is(humanizeUrl('file:///Users/sindresorhus/dev/humanize-url/'), 'file:///Users/sindresorhus/dev/humanize-url');
+	t.is(humanizeUrl('https://sindresorhus.com/#foo'), 'sindresorhus.com/#foo');
 });

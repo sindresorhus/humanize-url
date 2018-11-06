@@ -1,11 +1,10 @@
 'use strict';
-var normalizeUrl = require('normalize-url');
-var stripUrlAuth = require('strip-url-auth');
+const normalizeUrl = require('normalize-url');
 
-module.exports = function (str) {
-	if (typeof str !== 'string') {
+module.exports = url => {
+	if (typeof url !== 'string') {
 		throw new TypeError('Expected a string');
 	}
 
-	return normalizeUrl(stripUrlAuth(str)).replace(/^(?:https?:)?\/\//, '');
+	return normalizeUrl(url, {stripProtocol: true});
 };
