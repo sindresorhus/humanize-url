@@ -1,4 +1,4 @@
-# humanize-url [![Build Status](https://travis-ci.org/sindresorhus/humanize-url.svg?branch=master)](https://travis-ci.org/sindresorhus/humanize-url)
+# humanize-url
 
 > Humanize a URL: `https://sindresorhus.com` → `sindresorhus.com`
 
