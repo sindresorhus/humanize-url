@@ -39,7 +39,7 @@
 		"prettify"
 	],
 	"dependencies": {
-		"normalize-url": "^4.3.0"
+		"normalize-url": "^4.5.1"
 	},
 	"devDependencies": {
 		"ava": "^1.4.1",
