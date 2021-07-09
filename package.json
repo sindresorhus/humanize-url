@@ -4,6 +4,7 @@
 	"description": "Humanize a URL: `https://sindresorhus.com` → `sindresorhus.com`",
 	"license": "MIT",
 	"repository": "sindresorhus/humanize-url",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
@@ -23,7 +24,6 @@
 	],
 	"keywords": [
 		"url",
-		"uri",
 		"address",
 		"string",
 		"normalize",

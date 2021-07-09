@@ -2,13 +2,11 @@
 
 > Humanize a URL: `https://sindresorhus.com` → `sindresorhus.com`
 
-
 ## Install
 
 ```
 $ npm install humanize-url
 ```
-
 
 ## Usage
 
