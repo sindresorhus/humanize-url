@@ -1,10 +1,9 @@
-'use strict';
-const normalizeUrl = require('normalize-url');
+import normalizeUrl from 'normalize-url';
 
-module.exports = url => {
+export default function humanizeUrl(url) {
 	if (typeof url !== 'string') {
 		throw new TypeError('Expected a string');
 	}
 
 	return normalizeUrl(url, {stripProtocol: true});
-};
+}

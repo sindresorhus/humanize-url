@@ -13,13 +13,8 @@ $ npm install humanize-url
 ## Usage
 
 ```js
-const humanizeUrl = require('humanize-url');
+import humanizeUrl from 'humanize-url';
 
 humanizeUrl('https://www.sindresorhus.com/');
 //=> 'sindresorhus.com'
 ```
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
