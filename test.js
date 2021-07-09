@@ -1,5 +1,5 @@
 import test from 'ava';
-import humanizeUrl from '.';
+import humanizeUrl from './index.js';
 
 test('main', t => {
 	t.is(humanizeUrl('http://sindresorhus.com'), 'sindresorhus.com');
